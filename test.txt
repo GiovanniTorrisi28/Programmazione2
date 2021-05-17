@@ -1,0 +1,226 @@
+floor(a) -> Approsima a per difetto.
+            Se metto floor(a+0.5) posso approssimare al numero piu vicino.
+cin.ignore(numeric_limits<streamsize >::max(), ' \n ');
+
+file :
+
+ofstream file;
+file.open("test.txt", ios_base::app);
+if (file.is_open() == false)
+{
+	cerr << "Errore durante l'apertura" << endl;
+}
+file << "append prova";
+if (file.fail())
+{
+	cerr << "Errore durante la scrittura nel file";
+	file.clear();
+}
+else
+cout << "Scrittura avvenuta correttamente";
+file.close();
+
+//adesso creo un file di lettura e leggo i caratteri scritti prima
+ifstream readfile;
+readfile.open("test.txt");
+if(readfile.is_open()==true)
+{
+	cout << "File aperto correttamente";
+}
+string s;
+while (getline(readfile,s))
+{
+	cout <<s;
+}
+Posso anche dichiarare un unico file fstream e quando lo apre specificare se in in o out
+NON DIMENTICARE DI .CLOSE()
+In modalità scrittura il mio file viene creato se non esiste
+getline() si usa per le stringhe.Infatti prende come parametro il nome del file e la stringa
+miofile.get(a) si usa per i char .a->carattere
+
+COME SI USA FAIL
+
+int a;
+do
+{
+	cout << "Inserisci numero >0" << endl;
+	cin >> a;
+	if (cin.fail())
+	{
+		cerr << "Input non valido" << endl;
+		cin.clear();
+		cin.ignore(numeric_limits < streamsize > ::max(), '\n');
+		a = -1;
+	}
+} while (a < 0);
+/////////////////
+<button onclick="Calcola()" id="bottone"  disabled class="btn btn-light" style="align: left;" data-toggle="modal" data-target="#staticBackdrop">Calcola</button>
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <table class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">RA</th>
+                  <th scope="col">RB</th>
+                  <th scope="col">RZ</th>
+                  <th scope="col">RM</th>
+                  <th scope="col">PC_TEMP</th>
+                  <th scope="col">RY</th>
+                    <th scope="col">PC</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Stadio 1</th>
+                  <td><p id="p11"</p></td>
+                  <td><p id="p12"</p></td>
+                  <td><p id="p13"</p></td>
+                  <td><p id="p14"</p></td>
+                  <td><p id="p15"</p></td>
+                  <td><p id="p16"</p></td>
+                  <td><p id="p17"</p></td>
+
+                </tr>
+                <tr>
+                  <th scope="row">Stadio 2</th>
+                  <td><p id="p21"</p></td>
+                  <td><p id="p22"</p></td>
+                  <td><p id="p23"</p></td>
+                  <td><p id="p24"</p></td>
+                  <td><p id="p25"</p></td>
+                  <td><p id="p26"</p></td>
+                  <td><p id="p27"</p></td>
+                </tr>
+                <tr>
+                  <th scope="row">Stadio 3</th>
+                  <td><p id="p31"</p></td>
+                  <td><p id="p32"</p></td>
+                  <td><p id="p33"</p></td>
+                  <td><p id="p34"</p></td>
+                  <td><p id="p35"</p></td>
+                  <td><p id="p36"</p></td>
+                  <td><p id="p37"</p></td>
+                </tr>
+
+                <tr>
+                  <th scope="row">Stadio 4</th>
+                  <td><p id="p41"</p></td>
+                  <td><p id="p42"</p></td>
+                  <td><p id="p43"</p></td>
+                  <td><p id="p44"</p></td>
+                  <td><p id="p45"</p></td>
+                  <td><p id="p46"</p></td>
+                  <td><p id="p47"</p></td>
+
+                </tr>
+                <tr>
+                  <th scope="row">Stadio 5</th>
+                  <td><p id="p51"</p></td>
+                  <td><p id="p52"</p></td>
+                  <td><p id="p53"</p></td>
+                  <td><p id="p54"</p></td>
+                  <td><p id="p55"</p></td>
+                  <td><p id="p56"</p></td>
+                  <td><p id="p57"</p></td>
+                </tr>
+
+
+              </tbody>
+            </table>
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Understood</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+/////////////////////////////////////
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">RA</th>
+      <th scope="col">RB</th>
+      <th scope="col">RZ</th>
+      <th scope="col">RM</th>
+      <th scope="col">PC_TEMP</th>
+      <th scope="col">RY</th>
+        <th scope="col">PC</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Stadio 1</th>
+      <td><p id="p11"</p></td>
+      <td><p id="p12"</p></td>
+      <td><p id="p13"</p></td>
+      <td><p id="p14"</p></td>
+      <td><p id="p15"</p></td>
+      <td><p id="p16"</p></td>
+      <td><p id="p17"</p></td>
+
+    </tr>
+    <tr>
+      <th scope="row">Stadio 2</th>
+      <td><p id="p21"</p></td>
+      <td><p id="p22"</p></td>
+      <td><p id="p23"</p></td>
+      <td><p id="p24"</p></td>
+      <td><p id="p25"</p></td>
+      <td><p id="p26"</p></td>
+      <td><p id="p27"</p></td>
+    </tr>
+    <tr>
+      <th scope="row">Stadio 3</th>
+      <td><p id="p31"</p></td>
+      <td><p id="p32"</p></td>
+      <td><p id="p33"</p></td>
+      <td><p id="p34"</p></td>
+      <td><p id="p35"</p></td>
+      <td><p id="p36"</p></td>
+      <td><p id="p37"</p></td>
+    </tr>
+
+    <tr>
+      <th scope="row">Stadio 4</th>
+      <td><p id="p41"</p></td>
+      <td><p id="p42"</p></td>
+      <td><p id="p43"</p></td>
+      <td><p id="p44"</p></td>
+      <td><p id="p45"</p></td>
+      <td><p id="p46"</p></td>
+      <td><p id="p47"</p></td>
+
+    </tr>
+    <tr>
+      <th scope="row">Stadio 5</th>
+      <td><p id="p51"</p></td>
+      <td><p id="p52"</p></td>
+      <td><p id="p53"</p></td>
+      <td><p id="p54"</p></td>
+      <td><p id="p55"</p></td>
+      <td><p id="p56"</p></td>
+      <td><p id="p57"</p></td>
+    </tr>
+
+
+  </tbody>
+</table>
+
